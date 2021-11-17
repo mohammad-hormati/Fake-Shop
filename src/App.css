@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+/* Navbar */
+
+.container-navbar {
+  height: 10vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Home */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero .card-img {
+  height: 90vh !important;
+}
+
+.hero .card {
+  width: 100%;
+}
+
+.hero .bg-overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 2rem 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-res {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-res .btn {
+    width: 50%;
+    margin: 0 !important;
+    margin-bottom: 12px !important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* NavRes */
+
+.nav-res {
+  position: absolute;
+  z-index: 1;
+  top: 10vh;
+  right: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 50%;
+  height: 90vh;
+  background-color: rgba(255, 255, 255, 1);
+  transform: translateX(100%);
+  transition: all ease-in 0.5s;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-res .navbar-nav {
+  height: 70%;
+  justify-content: space-around;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-res .navbar-nav .nav-link {
+  color: black;
+  font-weight: bold;
+}
+
+.nav-res-active {
+  transform: translateX(0);
 }
